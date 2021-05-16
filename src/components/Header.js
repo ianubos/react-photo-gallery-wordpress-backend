@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import windowWidth from '../hooks/useWindowWidth'
+import Hamburger from './Hamburger'
 
 const siteData = {
     title: 'TsuyuPhotoGallery',
@@ -11,10 +12,11 @@ function Header() {
     const width = windowWidth()
     console.log(width)
     return (
-        <header className='w-full bg-darkest h-28 font-oswaldRegular'>
+        <>
+        <header className='w-full bg-darkest h-20 md:h-28 font-oswaldRegular box-border fixed z-50'>
             <div className='text-gray-300 flex justify-between items-center h-full w-full px-2 sm:px-10'>
-                <div className='text-2xl font-bold '>{siteData.title}</div>
-                <ul className='text-2xl flex justify-between items-center'>
+                <div className='text-xl md:text-2xl font-bold '>{siteData.title}</div>
+                <ul className='text-xl md:text-2xl flex justify-between items-center'>
                     {width > 500 ? (
                         siteData.items.map(item => (
                             <li className='text-xl font-semibold hover:text-white transition'>
@@ -27,12 +29,8 @@ function Header() {
                 </ul>
             </div>
         </header>
-    )
-}
-
-function Hamburger() {
-    return (
-        <div className='w-full bg-red-500'>hamburger</div>
+        <div className='block h-20 w-full'></div>
+        </>
     )
 }
 

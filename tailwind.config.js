@@ -15,6 +15,8 @@ module.exports = {
         oswaldRegular: "OswaldRegular, serif",
         oswaldSemiBold: "OswaldSemiBold, serif",
         gayathriThin: "GayathriThin, sans-serif",
+        gayathriBold: "GayathriBold, sans-serif",
+        gayathriRegular: "GayathriRegular, sans-serif",
       }
     },
   },

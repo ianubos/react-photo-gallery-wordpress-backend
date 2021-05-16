@@ -1,0 +1,142 @@
+/* HamburgerMenu */
+.top-bar {
+    animation-name: top-bar;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes top-bar {
+    from {
+        transform: rotate(135deg) translate(-50%, 0px);
+        transform-origin: left;
+    }
+    to {
+        transform: rotate(0) translate(-50%, -13px);
+    }
+}
+.top-bar.active {
+    animation-name: top-bar-active;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes top-bar-active {
+    from {
+        transform: rotate(0) translate(-50%, -13px);
+    }
+    to {
+        transform: rotate(135deg) translate(-50%, 0px);
+        transform-origin: left;
+    }
+}
+.bottom-bar {
+    animation-name: bottom-bar;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes bottom-bar {
+    from {
+        transform: rotate(-135deg) translate(-50%, 0px);
+        transform-origin: left;
+    }
+    to {
+        transform: rotate(0) translate(-50%, 13px);
+    }
+}
+.bottom-bar.active {
+    animation-name: bottom-bar-active;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes bottom-bar-active {
+    from {
+        transform: rotate(0) translate(-50%, 13px);
+    }
+    to {
+        transform: rotate(-135deg) translate(-50%, 0px);
+        transform-origin: left;
+    }
+}
+.middle-bar {
+    animation-name: middle-bar;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes middle-bar {
+    from {
+        transform: translate(-50%, 0);
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+.middle-bar.active {
+    animation-name: middle-bar-active;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes middle-bar-active {
+    from {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+}
+/* Mask */
+.mask {
+    animation-name: mask;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes mask {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+.mask.active {
+    animation-name: mask-active;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes mask-active {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* header scroll */
+.global-nav {
+    height: 90px;
+ }
+@media screen and (min-width: 768px){
+    .global-nav.clone-nav {
+        position: fixed;
+        top: -200px;
+        height: 90px;
+        transition: all 1s;
+        z-index: 30px;
+        --tw-bg-opacity: 1;
+        background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+    }
+    .global-nav.clone-nav.is-fixed-nav {
+        top: 0;
+    }
+
+}
