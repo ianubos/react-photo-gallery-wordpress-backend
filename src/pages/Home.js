@@ -9,6 +9,8 @@ export default function Home() {
     return (
         <div>
             <BackPicture />
+            {/* Spacer */}
+            <Spacer />
             <MainContent />
             {posts && (
                 <div>{posts[0].id}</div>
@@ -16,3 +18,7 @@ export default function Home() {
         </div>
     );
 }
+
+const Spacer = () => (
+    <span className="h-screen block"></span>
+)
