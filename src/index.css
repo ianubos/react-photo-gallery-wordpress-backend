@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,36 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @font-face {
+    font-family: 'OswaldBold';
+    src: local('Oswald-Bold'), url('assets/fonts/Oswald-Bold.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'OswaldExtraLight';
+    src: local('Oswald-ExtraLight'), url('assets/fonts/Oswald-ExtraLight.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'OswaldLight';
+    src: local('Oswald-Light'), url('assets/fonts/Oswald-Light.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'OswaldRegular';
+    src: local('Oswald-Regular'), url('assets/fonts/Oswald-Regular.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'OswaldSemiBold';
+    src: local('Oswald-SemiBold'), url('assets/fonts/Oswald-SemiBold.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'GayathriThin';
+    src: local('Gayathri-Thin'), url('assets/fonts/Gayathri-Thin.ttf') format('ttf');
+  }
 }
