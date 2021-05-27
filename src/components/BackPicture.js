@@ -8,7 +8,6 @@ const siteData = {
 
 function BackPicture() {
     const { scrollX, scrollY, scrollDirection } = useScroll();
-    console.log(scrollY)
     return (
         <div className='fixed w-full h-full' style={{zIndex: -10}}>
             <img 
@@ -18,8 +17,7 @@ function BackPicture() {
                     objectFit: 'cover', 
                     overflow: 'hidden', 
                     objectPosition: '50% 50%',
-                    filter: scrollY > 1200 ? 'blur(4px) brightness(0)' : 
-                        scrollY > 400 ? 'blur(4px) brightness(0.5)' : 'blur(0px) brightness(1)',
+                    filter: scrollY > 400 ? 'blur(4px) brightness(0.5)' : 'blur(0px) brightness(1)',
                 }}
                 alt='tsuyu fuji mountain' 
                 src={backpicture} 
