@@ -18,7 +18,10 @@ function Museum() {
             </Helmet>
             <div>
                 <SRLWrapper>
-                    <div className='w-full flex'>
+                    <div className='w-full flex justify-start flex-wrap'>
+                        <a href={sampleImageSrc} className='w-1/3 p-3'>
+                            <img src={sampleThumbnail} alt="Umbrella" />
+                        </a>
                         <a href={sampleImageSrc} className='w-1/3 p-3'>
                             <img src={sampleThumbnail} alt="Umbrella" />
                         </a>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { useForm, ValidationError } from '@formspree/react';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
@@ -17,6 +18,10 @@ function Contact() {
     }, [state])
   return (
     <div className='w-full text-gray-300 font-oswaldMedium my-5 md:my-20 max-w-2xl mx-auto'>
+        <Helmet>
+            <title>Contact | Tsuyu Photo Gallery</title>
+            <meta name="description" content="Tsuyu photo gallery contact page" />
+        </Helmet>
         <form onSubmit={handleSubmit} className='w-full flex flex-col box-border'>
             <div className='w-full flex md:py-8 flex-col md:flex-row box-border'>
                 <label htmlFor="name" className='w-full md:w-1/5 p-3 md:p-0'>
