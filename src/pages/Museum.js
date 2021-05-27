@@ -18,12 +18,17 @@ function Museum() {
             </Helmet>
             <div>
                 <SRLWrapper>
-                    <a href={sampleImageSrc}>
-                        <img src={sampleThumbnail} alt="Umbrella" />
-                    </a>
-                    <a href={sampleImageSrc}>
-                        <img src={sampleThumbnail} alt="Blue sky" />
-                    </a>
+                    <div className='w-full flex'>
+                        <a href={sampleImageSrc} className='w-1/3 p-3'>
+                            <img src={sampleThumbnail} alt="Umbrella" />
+                        </a>
+                        <a href={sampleImageSrc} className='w-1/3 p-3'>
+                            <img src={sampleThumbnail} alt="Umbrella" />
+                        </a>
+                        <a href={sampleImageSrc} className='w-1/3 p-3'>
+                            <img src={sampleThumbnail} alt="Umbrella" />
+                        </a>
+                    </div>
                 </SRLWrapper>
             </div>
         </div>
