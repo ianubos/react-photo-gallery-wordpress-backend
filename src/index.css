@@ -12,12 +12,28 @@ code {
     monospace;
 } */
 
+#root {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
+  html {
+    @apply bg-darkest;
+  }
   @font-face {
     font-family: 'OswaldBold';
     src: local('Oswald-Bold'), url('assets/fonts/Oswald-Bold.ttf') format('ttf');

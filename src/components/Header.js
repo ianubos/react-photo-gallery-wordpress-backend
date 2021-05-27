@@ -15,12 +15,16 @@ function Header() {
         <>
         <header className='w-full bg-darkest h-20 md:h-28 font-oswaldRegular box-border fixed z-50'>
             <div className='text-gray-300 flex justify-between items-center h-full w-full px-2 sm:px-10'>
-                <div className='text-xl md:text-2xl font-bold '>{siteData.title}</div>
+                <Link to='/' className='text-xl md:text-2xl font-bold '>
+                    {siteData.title}
+                </Link>
                 <ul className='text-xl md:text-2xl flex justify-between items-center'>
                     {width > 500 ? (
                         siteData.items.map(item => (
-                            <li className='text-xl font-semibold hover:text-white transition'>
-                                <Link to='/' className='h-full w-full py-2 px-2'>{item}</Link>
+                            <li className='text-xl font-semibold transition'>
+                                <Link to='/' className='h-full w-full py-2 px-2 hover:text-white text-gray-400 transition'>
+                                    {item}
+                                </Link>
                             </li>
                         ))
                     ) : (
