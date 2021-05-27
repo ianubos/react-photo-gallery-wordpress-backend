@@ -16,17 +16,17 @@ function Contact() {
         console.log(state)
     }, [state])
   return (
-    <div className='w-full text-gray-300 font-oswaldMedium my-20 max-w-2xl mx-auto'>
-        <form onSubmit={handleSubmit} className='w-full flex flex-col'>
-            <div className='w-full flex py-8 flex-col md:flex-row box-border'>
-                <label htmlFor="name" className='w-1/5 p-3 md:p-0'>
+    <div className='w-full text-gray-300 font-oswaldMedium my-5 md:my-20 max-w-2xl mx-auto'>
+        <form onSubmit={handleSubmit} className='w-full flex flex-col box-border'>
+            <div className='w-full flex md:py-8 flex-col md:flex-row box-border'>
+                <label htmlFor="name" className='w-full md:w-1/5 p-3 md:p-0'>
                     Name
                 </label>
                 <input
                     id="name"
                     type="name" 
                     name="name"
-                    className='text-gray-700 h-6 w-full max-w-full flex-grow bg-gray-300 box-border m-3 md:m-0'
+                    className='text-gray-700 h-6 w-11/12 mx-auto flex-grow bg-gray-300 box-border m-3 md:m-0'
                 />
                 <ValidationError 
                     prefix="Name" 
@@ -35,15 +35,15 @@ function Contact() {
                 />
             </div>
 
-            <div className='w-full flex py-8'>
-                <label htmlFor="email"  className='w-1/5'>
+            <div className='w-full flex md:py-8 flex-col md:flex-row box-border'>
+                <label htmlFor="email"  className='w-full md:w-1/5 p-3 md:p-0'>
                     Email Address
                 </label>
                 <input
                     id="email"
                     type="email" 
                     name="email"
-                    className='text-gray-700 h-6 w-full flex-grow bg-gray-300'
+                    className='text-gray-700 h-6 w-11/12 mx-auto flex-grow bg-gray-300 box-border m-3 md:m-0'
                 />
                 <ValidationError 
                     prefix="Email" 
@@ -52,14 +52,14 @@ function Contact() {
                 />
             </div>
 
-            <div className='w-full flex py-8'>
-                <label htmlFor="message"  className='w-1/5'>
-                    content
+            <div className='w-full flex md:py-8 flex-col md:flex-row box-border'>
+                <label htmlFor="message"  className='w-full md:w-1/5 p-3 md:p-0'>
+                    Content
                 </label>
                 <textarea
                     id="message"
                     name="message"
-                    className='text-gray-700 h-96 w-full flex-grow bg-gray-300'
+                    className='text-gray-700 h-96 w-11/12 mx-auto flex-grow bg-gray-300 box-border m-3 md:m-0'
                 />
                 <ValidationError 
                     prefix="Message" 
