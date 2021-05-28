@@ -24,7 +24,7 @@ function BackPicture() {
                 loading='eager' 
             />
             <div style={{transform: "translate(-50%, 5rem)"}} className='absolute top-10 sm:top-1/4 left-1/2'>
-                <div className='text-3xl sm:text-5xl text-white font-gayathriThin'>
+                <div className='text-3xl sm:text-5xl text-white' style={{fontFamily: 'Gayathri'}}>
                     {siteData.title}
                 </div>
             </div>
@@ -32,3 +32,4 @@ function BackPicture() {
     )
 }
 export default BackPicture
+

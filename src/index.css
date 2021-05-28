@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gayathri:wght@100&display=swap');
 
 #root {
   width: 100%;
@@ -64,14 +65,8 @@ body, html {
   }
   @font-face {
     font-family: 'GayathriThin';
-    src: local('Gayathri-Thin'), url('assets/fonts/Gayathri-Thin.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'GayathriBold';
-    src: local('Gayathri-Bold'), url('assets/fonts/Gayathri-Bold.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'GayathriRegular';
-    src: local('Gayathri-Regular'), url('assets/fonts/Gayathri-Regular.ttf') format('ttf');
+    src: local('Gayathri-Thin'),
+         url('assets/fonts/Gayathri-Thin.woff') format('woff'), /* Modern Browsers */
+         url('assets/fonts/Gayathri-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
   }
 }
