@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import windowWidth from '../hooks/useWindowWidth'
+import currentWidth from '../hooks/useCurrentWidth'
 import Hamburger from './Hamburger'
 
 import sitedata from '../siteData'
@@ -17,7 +17,7 @@ const NavItem = ({title, slug}) => (
 )
 
 function Header() {
-    const width = windowWidth()
+    const width = currentWidth()
     const siteData = sitedata()
     return (
         <>
@@ -27,7 +27,7 @@ function Header() {
                     {siteData.title}
                 </Link>
                 <ul className='text-xl md:text-2xl flex justify-between items-center'>
-                    {width > 500 ? (
+                    {width > 700 ? (
                         <>
                         {Object.entries(siteData.pages).map((item, index) => (
                             <NavItem 

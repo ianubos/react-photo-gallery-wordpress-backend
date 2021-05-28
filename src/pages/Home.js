@@ -12,10 +12,10 @@ export default function Home() {
     const pages = useFetch('http://tsuyu-photogallery.com/wp-json/wp/v2/pages')
     const media = useFetch('http://tsuyu-photogallery.com/wp-json/wp/v2/media')
     const categories = useFetch('http://tsuyu-photogallery.com/wp-json/wp/v2/categories')
-    // console.log('categories data:', categories)
-    // console.log('posts data:', posts)
-    // console.log('pages data:', pages)
-    // console.log('madia data:', media)
+    console.log('categories data:', categories)
+    console.log('posts data:', posts)
+    console.log('pages data:', pages)
+    console.log('madia data:', media)
     const postsData = [
         {
             imgSrc: imgsrc1,
