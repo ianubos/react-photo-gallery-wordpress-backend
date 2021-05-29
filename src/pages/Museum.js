@@ -9,7 +9,7 @@ function Museum({data}) {
       <Helmet>
         <title>Gallery | Tsuyu Photo Gallery</title>
         <meta name="description" content="Tsuyu photo gallery" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        {/* <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> */}
       </Helmet>
       <div>
         <SRLWrapper>
