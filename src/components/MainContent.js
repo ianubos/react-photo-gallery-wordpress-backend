@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SRLWrapper } from "simple-react-lightbox";
 import ProgressiveImage from "./ProgressiveImage";
 
-function Latest({ postsData }) {
+function Latest({ latest }) {
   return (
     <div className="w-full mx-auto box-border">
       <h2 className="text-gray-400 font-bold text-2xl font-oswaldRegular p-4 mx-4">
@@ -11,14 +11,14 @@ function Latest({ postsData }) {
       </h2>
       <SRLWrapper>
         <div className="flex justify-around items-center flex-col sm:flex-row px-4 md:px-8">
-          {postsData &&
-            postsData.map((post) => (
+          {latest &&
+            latest.map((post) => (
               <div className="w-full h-full sm:w-1/3 px-4 md:px-8">
                 <a
-                  href={post.imgSrc}
+                  href={post.image}
                   className="w-full h-full sm:w-1/3 px-4 md:px-8"
                 >
-                  <img src={post.imgSrc} alt={post.alt} />
+                  <img src={post.thumbnail} alt={post.alt} />
                 </a>
               </div>
             ))}
@@ -28,7 +28,7 @@ function Latest({ postsData }) {
   );
 }
 
-function Categories({ categoriesData }) {
+function Categories({ categories }) {
   return (
     <div
       className="w-full h-full font-oswaldRegular"
@@ -38,20 +38,20 @@ function Categories({ categoriesData }) {
         Category
       </h2>
       <ul className="w-full flex flex-wrap px-4">
-        {categoriesData.map((cat) => (
+        {categories && categories.map((cat) => (
           <Link
-            to={`/${cat.category}`}
+            to={`/${cat.slug}`}
             className="text-gray-400 w-full sm:w-1/2 p-4 hover:text-gray-200 transition"
           >
             <ProgressiveImage
               className="cover"
-              alt={"woman"}
+              alt={cat.title}
               overlaySrc={
-                "https://images.pexels.com/photos/217009/pexels-photo-2177009.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=5"
+                "https://i1.wp.com/angularscript.com/wp-content/uploads/2018/06/Progressively-Loading-Images-With-Blur-Effect-min.png?fit=800%2C455&ssl=1"
               }
-              src={cat.imgSrc}
+              src={cat.image}
             />
-            <p className="text-lg w-full flex justify-center">{cat.category}</p>
+            <p className="text-lg w-full flex justify-center pt-8">{cat.title}</p>
           </Link>
         ))}
       </ul>
@@ -59,11 +59,11 @@ function Categories({ categoriesData }) {
   );
 }
 
-function MainContent({ postsData, categoriesData }) {
+function MainContent({ latest, categories }) {
   return (
     <main className="w-full sm:w-4/5 h-full bg-darkest mx-auto box-border">
-      <Latest postsData={postsData} />
-      <Categories categoriesData={categoriesData} />
+      <Latest latest={latest} />
+      <Categories categories={categories} />
     </main>
   );
 }

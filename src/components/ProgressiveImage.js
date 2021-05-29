@@ -12,6 +12,9 @@ const overlayStyles = {
   filter: "blur(1px)",
   transition: "opacity ease-in 1000ms",
   clipPath: "inset(0)",
+  width: 400,
+  height: 300,
+  top: 0,
 };
 
 function ProgressiveImage(props) {
@@ -20,7 +23,7 @@ function ProgressiveImage(props) {
   const { overlaySrc } = props;
   let filteredProps = omit(props, "overlaySrc");
   return (
-    <span className="z-10 w-full h-full">
+    <span className="z-10 w-full h-full relative">
       <img
         {...filteredProps}
         onLoad={() => {
@@ -33,14 +36,14 @@ function ProgressiveImage(props) {
         style={{ zIndex: 10000, width: "100%" }}
         alt={props?.alt ? props.alt : "japan photo"}
       />
-      <img
+      {/* <img
         {...filteredProps}
         className={`${props.className}`}
         style={overlayStyles}
         {...(highResImageLoaded && { style: { opacity: "0" } })}
         src={overlaySrc}
         alt={props?.alt ? props.alt : "japan photo"}
-      />
+      /> */}
     </span>
   );
 }
